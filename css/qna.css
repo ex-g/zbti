@@ -1,0 +1,17 @@
+#qna {
+    display: none;
+    background-color: pink;
+}
+
+.status {
+    height: 20px;
+    width: 80%;
+    background-color: white;   
+    border-radius: 20px;
+}
+
+.statusBar {
+    height: 100%;
+    background: linear-gradient(to bottom,  #fcecfc 0%,#fba6e1 50%,#fd89d7 51%,#ff7cd8 100%);
+    border-radius: 20px;
+}

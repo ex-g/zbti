@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZBTI</title>
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/qna.css">
+    <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="./css/result.css">
+    <script type="text/javascript" src="./js/time.js"></script>
+    <script src="https://kit.fontawesome.com/77dc09b73f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- header1 -->
+        <header id="first-header">
+            <div id="title">HAPPY BUDDY DAY !</div>
+            <i class="fa-solid fa-wifi"></i>
+            <!-- 시계 -->
+            <div class="time">
+                <span class="hour">00</span> : <span class="min">00</span>
+                 <!-- : <span class="sec">00</span>  -->
+                 <span class="diff">pm</span>
+            </div>
+            <span>&nbsp</span>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-comment"></i>
+            <i class="fa-solid fa-battery-full"></i>
+        </header>
+        <section id="intro">
+            <h3>ZBTI TEST</h3>
+            <!-- 이미지 -->
+            <!-- 내용 넣기 -->
+            <button type="button" onclick="js:begin()">시작하기</button>
+        </section>
+    
+        <section id="qna">
+            <div class="status">
+                <div class="statusBar">
+                </div>
+            </div>
+    
+            <div class="qBox"></div>
+            <div class="answerBox">
+                <div class=answer>
+                    <img src="" class="left">
+                </div>
+                <div class="answer">
+                    <img src="" class="right">
+                </div>
+            </div>
+        </section>
+    
+        <section id="result">
+            <h3>ZBTI 결과</h3>
+            <div class="resultNickname"></div>
+            <div class="resultName"></div>
+            <div class="resultImg"></div>
+            <div class="resultDesc"></div>
+            <div class="resultTip1"></div>
+            <div class="resultTip2"></div>
+            <div class="resultSpot1"></div>
+            <div class="resultSpot2"></div>
+            <div class="resultSpot3"></div>
+            <button type="button">공유하기</button>
+        </section>
+    </div>
+    
+    <script src="./js/data.js"></script>
+    <script src="./js/start.js"></script>
+</body>
+</html>
