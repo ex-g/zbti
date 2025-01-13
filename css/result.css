@@ -1,3 +1,49 @@
 #result {
+    height: 620px;
+    display: none;
+    text-align: center;
+    padding: 40px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
     display: none;
 }
+
+.resultNickname {
+    font-size: 25px;
+    font-weight: 800;
+    margin: 20px 0px 5px 0px;
+}
+
+.resultName {
+    font-size: 13px;
+    margin-bottom: 20px;
+    color: gray;
+}
+
+#resultImg {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.resultDesc {
+    font-size: 12px;
+    /* padding: 30px; */
+    line-height: 20px;
+    text-align: left;
+}
+
+.tips, .spots {
+    font-size: 13px;
+    text-align: left;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+hr {
+    margin: 10px 0px;
+}
+

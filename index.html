@@ -28,11 +28,30 @@
             <i class="fa-solid fa-comment"></i>
             <i class="fa-solid fa-battery-full"></i>
         </header>
+
         <section id="intro">
-            <h3>ZBTI TEST</h3>
-            <!-- 이미지 -->
-            <!-- 내용 넣기 -->
-            <button type="button" onclick="js:begin()">시작하기</button>
+            <h3>여행 성향 테스트</h3>
+            <div class="moving">
+                <img src="./img/result/0.jpg">
+                <img src="./img/result/1.jpg">
+                <img src="./img/result/2.jpg">
+                <img src="./img/result/3.jpg">
+                <img src="./img/result/4.jpg">
+                <img src="./img/result/5.jpg">
+                <img src="./img/result/6.jpg">
+                <img src="./img/result/7.jpg">
+            </div>
+            <div class="moving2">
+                <img src="./img/result/8.jpg">
+                <img src="./img/result/9.jpg">
+                <img src="./img/result/10.jpg">
+                <img src="./img/result/11.jpg">
+                <img src="./img/result/12.jpg">
+                <img src="./img/result/13.jpg">
+                <img src="./img/result/14.jpg">
+                <img src="./img/result/15.jpg">
+            </div>
+            <button type="button" onclick="js:begin()">나의 여행 성향 알아보기💛</button>
         </section>
     
         <section id="qna">
@@ -44,25 +63,34 @@
             <div class="qBox"></div>
             <div class="answerBox">
                 <div class=answer>
-                    <img src="" class="left">
                 </div>
                 <div class="answer">
-                    <img src="" class="right">
                 </div>
             </div>
         </section>
     
         <section id="result">
-            <h3>ZBTI 결과</h3>
+            <h4>여행 성향 테스트 결과</h4>
             <div class="resultNickname"></div>
             <div class="resultName"></div>
-            <div class="resultImg"></div>
+            <div class="resultImg">
+                <img id="resultImg" src="">
+            </div>
             <div class="resultDesc"></div>
-            <div class="resultTip1"></div>
-            <div class="resultTip2"></div>
-            <div class="resultSpot1"></div>
-            <div class="resultSpot2"></div>
-            <div class="resultSpot3"></div>
+            <fieldset class="tips">
+                <legend>Tips</legend>
+                <ol><div class="resultTip1 tip"></div></ol>
+                <hr>
+                <ol><div class="resultTip2 tip"></div></ol>
+            </fieldset>
+            <fieldset class="spots">
+                <legend>Best Spots</legend>
+                <div class="resultSpot1 spot"></div>
+                <hr>
+                <div class="resultSpot2 spot"></div>
+                <hr>
+                <div class="resultSpot3 spot"></div>
+            </fieldset>
             <button type="button">공유하기</button>
         </section>
     </div>

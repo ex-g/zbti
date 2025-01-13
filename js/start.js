@@ -27,70 +27,50 @@ function begin() {
 }
 
 // qna 페이지의 답변란
-// function addAnswer(answerText, qIdx, aIdx) {
-//     var a = document.querySelector('.answerBox');
-//     var answer = document.createElement('Button');
-//     answer.classList.add('answerList');
-//     a.appendChild(answer);
-//     answer.innerHTML = answerText;
+function addAnswer(answerText, qIdx, aIdx) {
+    var a = document.querySelector('.answerBox');
+    var answer = document.createElement('Button');
+    answer.classList.add('answerList');
+
+    qnaURL = './img/question/'
+
+    if (aIdx == 0) {
+        pic_url = qnaURL + qIdx + 'A.png';
+    } else {
+        pic_url = qnaURL + qIdx + 'B.png';
+    }
+
+    answer.style.background = answer.style.background = 'url(' + pic_url + ') no-repeat';
+    answer.style.backgroundSize = 'cover';
+    answer.style.width = '150px';
+    answer.style.height = '257px';
+    a.appendChild(answer);
+    answer.innerHTML = answerText;
 
     // 답변 중 하나가 클릭되었을 때
-    // answer.addEventListener("click", function() {
-    //     var children = document.querySelectorAll('.answerList');
-    //     for (let i = 0; i < children.length; i++) {
-    //         children[i].disablaed = true;
-    //         children[i].style.WebkitAnimation = "fadeOut 0.5s";
-    //         children[i].style.animation = "fadeOut 0.5s";
-    //     }
-    //     setTimeout(() => {
-            // 답변과 관련된 타입 순서에 1 증가시킴
-            // var target = qnaList[qIdx].a[aIdx].type;
-            // zbti_score[target] += 1;
-            // console.log(zbti_score);
-
-            // 답변 다 안 보이게 처리
-//             for (let i = 0; i < children.length; i++) {
-//                 children[i].style.display = 'none';
-//             }
-//             goNext(++qIdx);
-//         }, 450)
-//     }, false);
-// }
-
-function imageNext(qIdx, aIdx) {
-    let leftImage = document.querySelector('.left');
-    let rightImage = document.querySelector('.right');
-
-    leftImage.disablaed = true;
-    leftImage.classList.remove('fadeIn');
-    leftImage.classList.add('fadeOut');
-
-    rightImage.disablaed = true;
-    rightImage.classList.remove('fadeIn');
-    rightImage.classList.add('fadeOut');
-
-
-    setTimeout(() => {
-        if (qIdx + 1 === endPoint) {
-            goResult();
-            return;
-        } else {
-            setTimeout(() => {
+    answer.addEventListener("click", function() {
+        var children = document.querySelectorAll('.answerList');
+        for (let i = 0; i < children.length; i++) {
+            children[i].disablaed = true;
+            children[i].style.WebkitAnimation = "fadeOut 0.5s";
+            children[i].style.animation = "fadeOut 0.5s";
+        }
+        setTimeout(() => {
             // 답변과 관련된 타입 순서에 1 증가시킴
             var target = qnaList[qIdx].a[aIdx].type;
             zbti_score[target] += 1;
             console.log(zbti_score);
 
             // 답변 다 안 보이게 처리
-            leftImage.style.display = 'none';
-            rightImage.style.display = 'none';
+            for (let i = 0; i < children.length; i++) {
+                children[i].style.display = 'none';
+            }
             goNext(++qIdx);
-            }, 450)
-        }
-    }, 450)
+        }, 450)
+    }, false);
 }
 
-// qna 페이지에서 답변 선택 시 다음 질문으로 넘어감
+// 질문 바꾸기
 function goNext(qIdx) {
     if (qIdx === endPoint) {
         goResult();
@@ -98,40 +78,13 @@ function goNext(qIdx) {
     }
     var q = document.querySelector(".qBox");
     q.innerHTML = qnaList[qIdx].q;
+
     var status = document.querySelector('.statusBar');
     status.style.width = (100 / endPoint) * (qIdx + 1) + '%';
 
-    let qnaURL = './img/';
-    let leftURL = qnaURL + 'photo1.jpg';
-    let rightURL = qnaURL + 'photo2.jpg';
-
-    let leftImage = document.querySelector('.left');
-    let rightImage = document.querySelector('.right');
-    leftImage.src = leftURL;
-    rightImage.src = rightURL;
-
-    leftImage.style.display = 'block';
-    rightImage.style.display = 'block';
-
-    leftImage.classList.remove('fadeOut');
-    rightImage.classList.remove('fadeOut');
-
-    leftImage.classList.add('fadeIn');
-    rightImage.classList.add('fadeIn');
-
-    leftImage.addEventListener("click", function() {
-        imageNext(qIdx, 0)
-    }, false);
-
-    rightImage.addEventListener("click", function() {
-        imageNext(qIdx, 1)
-    }, false);
-
-
-    /*
     for (let i in qnaList[qIdx].a) {
         addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);
-    } */
+    }
 }
 
 // 결괏값 계산하기
@@ -168,10 +121,11 @@ function setResult() {
     resultName.innerHTML = zbti_info.name;
 
     // const resultImg = document.querySelector('.resultImg');
-    // const imgDiv = document.querySelector('#resultImg');
-    // var imgURL = 'img/image-' + point + '.png';
-    // resultImg.src = imgURL;
-    // imgDiv.pushChild(resultImg);
+    const imgDiv = document.querySelector('#resultImg');
+    var imgURL = './img/result/' + zbti_number + '.jpg';
+    // var imgURL = './img/result/0.jpg';
+    imgDiv.src = imgURL;
+    // resultImg.pushChild(imgDiv);
 
     const resultDesc = document.querySelector('.resultDesc');
     resultDesc.innerHTML = zbti_info.desc;
@@ -205,6 +159,4 @@ function goResult() {
         }, 450)
         setResult();
     })
-
-    // console.log(select);
 }
