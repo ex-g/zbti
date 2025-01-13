@@ -59,7 +59,6 @@ function addAnswer(answerText, qIdx, aIdx) {
             // 답변과 관련된 타입 순서에 1 증가시킴
             var target = qnaList[qIdx].a[aIdx].type;
             zbti_score[target] += 1;
-            console.log(zbti_score);
 
             // 답변 다 안 보이게 처리
             for (let i = 0; i < children.length; i++) {
@@ -73,6 +72,14 @@ function addAnswer(answerText, qIdx, aIdx) {
 // 질문 바꾸기
 function goNext(qIdx) {
     if (qIdx === endPoint) {
+        var infoBox = document.querySelector('.infoBox');
+        var info = document.querySelector('.info');
+        infoBox.disablaed = true;
+        infoBox.style.WebkitAnimation = "fadeOut 0.5s";
+        infoBox.style.animation = "fadeOut 0.5s";
+        info.disablaed = true;
+        info.style.WebkitAnimation = "fadeOut 0.5s";
+        info.style.animation = "fadeOut 0.5s";
         goResult();
         return;
     }
@@ -81,6 +88,9 @@ function goNext(qIdx) {
 
     var status = document.querySelector('.statusBar');
     status.style.width = (100 / endPoint) * (qIdx + 1) + '%';
+
+    var info = document.querySelector(".info");
+    info.innerHTML = qnaList[qIdx].i;
 
     for (let i in qnaList[qIdx].a) {
         addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Poor+Story&display=swap');
+
 #qna {
     display: none;
     padding: 20px;
@@ -40,4 +42,19 @@
     padding-top: 160px;
     color: #fde952;
     /* font-weight: 800; */
+}
+
+.infoBox {
+    width: 320px;
+    border-radius: 20px;
+    margin-top: 40px;
+    height: 120px;
+    padding: 20px;
+}
+
+.info {
+    font-family: "Gowun Dodum", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
 }
