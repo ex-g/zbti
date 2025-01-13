@@ -9,25 +9,24 @@
     <link rel="stylesheet" href="./css/result.css">
     <link rel="stylesheet" href="./css/qna.css">
     <script type="text/javascript" src="js/time.js"></script>
-    <script src="js/kakao.min.js"></script>
     <script src="https://kit.fontawesome.com/77dc09b73f.js" crossorigin="anonymous"></script>
-    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"
-    integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90nka" crossorigin="anonymous"></script>
-    <script src="js/apikey.js"></script>
-    <script src="js/share.js"></script>
+    <script type="text/javascript" src="js/apikey.js"></script>
+    <script type="text/javascript" src="js/share.js"></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js" integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90nka" crossorigin="anonymous"></script>
     <script>
         Kakao.init(config.KAKAO_API_KEY);
         Kakao.isInitialized();
     </script>
     <style>
         .fa-link, .fa-b, .fa-share {
-            width: 30px;
-            height: 30px;
+            width: 50px;
+            height: 50px;
             background-color: orange;
             margin: 0px 20px;
-            line-height: 30px;
-            border-radius: 20px;
+            line-height: 50px;
+            border-radius: 50px;
             color: rgb(254, 254, 221);
+            font-size: 20px;
         }
 
         .fa-link:active, .fa-b:active, .fa-share:active {
@@ -129,16 +128,7 @@
         </section>
     </div>
     
-    <script src="js/data.js"></script>
-    <script src="js/start.js"></script>
-
-    <script>
-        function copy() {
-            navigator.clipboard.writeText("https://zbti.pages.dev/");
-
-            // 복사완료에 대해 Alert으로 띄우기
-            alert("링크가 복사되었습니다.");
-        }
-    </script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/start.js"></script>
 </body>
 </html>

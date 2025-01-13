@@ -9,6 +9,10 @@ const zbti_score = {
     "F" : 0, "M" : 0
     }
 
+// result 페이지에서 URL 복사하기
+function copy() {
+    navigator.clipboard.writeText("https://zbti.pages.dev/");
+}
 
 // intro에서 '시작하기' 버튼 클릭 시 begin() 함수 실행
 function begin() {
