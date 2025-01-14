@@ -139,6 +139,7 @@ function setResult() {
     var imgURL = './img/result/' + zbti_number + '.jpg';
     // var imgURL = './img/result/0.jpg';
     imgDiv.src = imgURL;
+    imgDiv.alt = zbti_number;
     // resultImg.pushChild(imgDiv);
 
     const resultDesc = document.querySelector('.resultDesc');

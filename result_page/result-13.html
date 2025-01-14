@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result-0</title>
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/result.css">
+    <script src="https://kit.fontawesome.com/77dc09b73f.js" crossorigin="anonymous"></script>
+    <script src="../js/time.js"></script>
+    <script src="../js/share.js"></script>
+    <style>
+        .fa-play {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(130, 199, 241);
+            margin: 0px 20px;
+            line-height: 50px;
+            border-radius: 50px;
+            color: whitesmoke;
+            font-size: 20px;
+        }
+
+        .fa-play:active {
+            color: whitesmoke;
+            background-color: rgb(130, 199, 241);
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- header1 -->
+        <header id="first-header">
+            <div id="title">HAPPY BUDDY DAY !</div>
+            <i class="fa-solid fa-wifi"></i>
+            <!-- 시계 -->
+            <div class="time">
+                <span class="hour">00</span> : <span class="min">00</span>
+                 <!-- : <span class="sec">00</span>  -->
+                 <span class="diff">pm</span>
+            </div>
+            <span>&nbsp</span>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-comment"></i>
+            <i class="fa-solid fa-battery-full"></i>
+        </header>
+
+        <section id="shareResult">
+            <h4>여행 성향 테스트 결과</h4>
+            <div class="resultNickname">자유 여행자</div>
+            <div class="resultName">추억을 음미하는 탐구자</div>
+            <div class="resultImg">
+                <img id="resultImg" src="../img/result/13.jpg">
+            </div>
+            <div class="resultDesc">
+                실내 활동을 선호하며, 계획보다는 현재의 흐름에 몸을 맡겨 즉흥적으로 움직이는 걸 좋아합니다.
+                태스크를 미리 처리해둔 덕분에 마음 편히 느긋한 시간을 보내며, 책방이나 카페처럼 조용한 공간에서 자신만의 속도로 여행을 즐깁니다.
+                사진보다는 오감으로 느낀 순간과 감정들을 기억 속에 담아두는 것을 선호합니다.
+                차분하고 감성적인 여정을 통해 내면의 만족과 평화를 찾는 스타일입니다.
+            </div>
+            <fieldset class="tips">
+                <legend>Tips</legend>
+                <div class="resultTip1 tip">여행 중 마신 커피의 맛, 들은 음악, 창문 너머 풍경처럼 감각적인 순간을 음미해보세요.</div>
+                <hr>
+                <div class="resultTip2 tip">책방, 전시회, 지역의 이색 카페 등에서 새로운 경험을 발견하며 자신만의 여행을 만들어보세요.</div>
+            </fieldset>
+            <fieldset class="spots">
+                <legend>Best Spots</legend>
+                <div class="resultSpot1 spot">이탈리아 베네치아: 여유롭게 도시를 탐험하고, 그 순간을 즐기기 좋은 곳입니다.</div>
+                <hr>
+                <div class="resultSpot2 spot">포르투갈 리스본: 편안하게 걷고 감상하며 본인만의 여행을 만끽할 수 있는 곳입니다.</div>
+                <hr>
+                <div class="resultSpot3 spot">오스트리아 비엔나: 특유의 느긋한 분위기 속에서 아름다운 문화와 예술을 만나볼 수 있습니다.</div>
+            </fieldset>
+            <div class="buttons">
+                <i class="fa-solid fa-play" id="goHome" onclick="moveHome()"></i>
+            </div>
+        </section>
+        <script>
+            function moveHome() {
+                location.href = '../index.html';
+            }
+        </script>
+    </div>
+</body>
+</html>

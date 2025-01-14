@@ -6,6 +6,13 @@
     overflow-y: scroll;
 }
 
+#shareResult {
+    height: 620px;
+    text-align: center;
+    padding: 40px;
+    overflow-y: scroll;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result-0</title>
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/result.css">
+    <script src="https://kit.fontawesome.com/77dc09b73f.js" crossorigin="anonymous"></script>
+    <script src="../js/time.js"></script>
+    <script src="../js/share.js"></script>
+    <style>
+        .fa-play {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(130, 199, 241);
+            margin: 0px 20px;
+            line-height: 50px;
+            border-radius: 50px;
+            color: whitesmoke;
+            font-size: 20px;
+        }
+
+        .fa-play:active {
+            color: whitesmoke;
+            background-color: rgb(130, 199, 241);
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- header1 -->
+        <header id="first-header">
+            <div id="title">HAPPY BUDDY DAY !</div>
+            <i class="fa-solid fa-wifi"></i>
+            <!-- 시계 -->
+            <div class="time">
+                <span class="hour">00</span> : <span class="min">00</span>
+                 <!-- : <span class="sec">00</span>  -->
+                 <span class="diff">pm</span>
+            </div>
+            <span>&nbsp</span>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-comment"></i>
+            <i class="fa-solid fa-battery-full"></i>
+        </header>
+
+        <section id="shareResult">
+            <h4>여행 성향 테스트 결과</h4>
+            <div class="resultNickname">여행의 리듬 디자이너</div>
+            <div class="resultName">계획적인 여유 여행자</div>
+            <div class="resultImg">
+                <img id="resultImg" src="../img/result/2.jpg">
+            </div>
+            <div class="resultDesc">
+                당신은 여행에서 충분한 준비와 계획을 중요시하는 동시에 여유를 즐기는 여행자입니다. 
+                여행 전에 일정을 체계적으로 정리하지만, 그 일정 안에서 느긋함을을 느끼고 싶은 스타일이에요.
+                따라서 다양한 액티비티를 계획하면서도, 휴식의 순간도 놓치지 않는 여행을 선호합니다.
+                또한 사진보다는 그 순간을 기억하고 즐기려는 성향이 강합니다.
+            </div>
+            <fieldset class="tips">
+                <legend>Tips</legend>
+                <div class="resultTip1 tip">여유 시간을 충분히 고려해, 일정에 유동성을 둬보세요.</div>
+                <hr>
+                <div class="resultTip2 tip">본인의 휴식 성향을 파악하고 이를 잘 실현할 수 있는 곳으로 여행지를 골라보세요!</div>
+            </fieldset>
+            <fieldset class="spots">
+                <legend>Best Spots</legend>
+                <div class="resultSpot1 spot">스위스 제네바: 기차로 유럽을 여행하며 여유로운 분위기를 즐기기에 완벽한 도시입니다.</div>
+                <hr>
+                <div class="resultSpot2 spot">프랑스 니스: 해변과 고풍스러운 거리가 여행의 여유를 느낄 수 있는 곳입니다.</div>
+                <hr>
+                <div class="resultSpot3 spot">캐나다 밴프: 자연을 즐기며 차분하게 여유를 즐길 수 있는 지역입니다.</div>
+            </fieldset>
+            <div class="buttons">
+                <i class="fa-solid fa-play" id="goHome" onclick="moveHome()"></i>
+            </div>
+        </section>
+        <script>
+            function moveHome() {
+                location.href = '../index.html';
+            }
+        </script>
+    </div>
+</body>
+</html>

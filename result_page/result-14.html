@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result-0</title>
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/result.css">
+    <script src="https://kit.fontawesome.com/77dc09b73f.js" crossorigin="anonymous"></script>
+    <script src="../js/time.js"></script>
+    <script src="../js/share.js"></script>
+    <style>
+        .fa-play {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(130, 199, 241);
+            margin: 0px 20px;
+            line-height: 50px;
+            border-radius: 50px;
+            color: whitesmoke;
+            font-size: 20px;
+        }
+
+        .fa-play:active {
+            color: whitesmoke;
+            background-color: rgb(130, 199, 241);
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- header1 -->
+        <header id="first-header">
+            <div id="title">HAPPY BUDDY DAY !</div>
+            <i class="fa-solid fa-wifi"></i>
+            <!-- 시계 -->
+            <div class="time">
+                <span class="hour">00</span> : <span class="min">00</span>
+                 <!-- : <span class="sec">00</span>  -->
+                 <span class="diff">pm</span>
+            </div>
+            <span>&nbsp</span>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-comment"></i>
+            <i class="fa-solid fa-battery-full"></i>
+        </header>
+
+        <section id="shareResult">
+            <h4>여행 성향 테스트 결과</h4>
+            <div class="resultNickname">내면을 담는 작가</div>
+            <div class="resultName">느긋하면서도 창의적인 여행 기록자</div>
+            <div class="resultImg">
+                <img id="resultImg" src="../img/result/14.jpg">
+            </div>
+            <div class="resultDesc">
+                당신은 여행 중 즉흥적으로 일어나는 순간을 기록하며 즐기는 여행자입니다.
+                계획보다는 현장에서 만나는 순간을 중요하게 생각하고, 이를 카메라로 담으려고 합니다.
+                실내 활동을 즐기면서도, 새로운 경험을 하는 것을 두려워하지 않으며 그 순간을 즐깁니다.
+            </div>
+            <fieldset class="tips">
+                <legend>Tips</legend>
+                <div class="resultTip1 tip">카페 창가, 전시회 한 구석 등 감각적인 순간을 사진으로 남기기 좋은 공간을 탐색하세요.</div>
+                <hr>
+                <div class="resultTip2 tip">여유로운 실내 활동은 당신의 스타일에 잘 맞고, 여행을 더욱 즐겁게 만들어줄 거예요.</div>
+            </fieldset>
+            <fieldset class="spots">
+                <legend>Best Spots</legend>
+                <div class="resultSpot1 spot">스페인 바르셀로나: 다채로운 거리와 예술이 넘치는 도시입니다.</div>
+                <hr>
+                <div class="resultSpot2 spot">이탈리아 로마: 역사적인 순간을 기록하기 좋은 여행지입니다.</div>
+                <hr>
+                <div class="resultSpot3 spot">영국 런던: 다양한 활동을 즐기면서 그 순간을 사진으로 담을 수 있어요.</div>
+            </fieldset>
+            <div class="buttons">
+                <i class="fa-solid fa-play" id="goHome" onclick="moveHome()"></i>
+            </div>
+        </section>
+        <script>
+            function moveHome() {
+                location.href = '../index.html';
+            }
+        </script>
+    </div>
+</body>
+</html>

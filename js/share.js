@@ -1,65 +1,31 @@
-function kakaoShare() {
-        Kakao.Share.sendDefault({
+const url = 'http://127.0.0.1:5500/ZBTI/'
+
+function setShare() {
+    var resultImg = document.querySelector('.resultImg');
+    var resultAlt = resultImg.firstElementChild.alt;
+    const shareTitle = 'BUDDY 여행 성향 테스트 결과';
+    const shareDesc = infoList[resultAlt].nickname;
+    const shareImage = url + 'img/result/' + resultAlt + '.jpg';
+    const shareURL = url + 'result_page/result-' + resultAlt + '.html';
+
+    Kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
-        title: '오늘의 디저트',
-        description: '아메리카노, 빵, 케익',
+        title: shareTitle,
+        description: shareDesc,
         imageUrl:
-            'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+            shareImage,
         link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            webUrl: 'https://developers.kakao.com',
+            mobileWebUrl: shareURL,
+            webUrl: shareURL,
         },
-        },
-        itemContent: {
-        profileText: 'Kakao',
-        profileImageUrl: 'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-        titleImageUrl: 'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-        titleImageText: 'Cheese cake',
-        titleImageCategory: 'Cake',
-        items: [
-            {
-            item: 'Cake1',
-            itemOp: '1000원',
-            },
-            {
-            item: 'Cake2',
-            itemOp: '2000원',
-            },
-            {
-            item: 'Cake3',
-            itemOp: '3000원',
-            },
-            {
-            item: 'Cake4',
-            itemOp: '4000원',
-            },
-            {
-            item: 'Cake5',
-            itemOp: '5000원',
-            },
-        ],
-        sum: '총 결제금액',
-        sumOp: '15000원',
-        },
-        social: {
-        likeCount: 10,
-        commentCount: 20,
-        sharedCount: 30,
         },
         buttons: [
         {
-            title: '웹으로 이동',
+            title: '결과 확인하기',
             link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            webUrl: 'https://developers.kakao.com',
-            },
-        },
-        {
-            title: '앱으로 이동',
-            link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            webUrl: 'https://developers.kakao.com',
+            mobileWebUrl: shareURL,
+            webUrl: shareURL,
             },
         },
         ],
