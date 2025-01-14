@@ -1,4 +1,4 @@
-const url = 'http://127.0.0.1:5500/ZBTI/'
+const url = 'https://zbti.pages.dev/'
 
 function setShare() {
     var resultImg = document.querySelector('.resultImg');
