@@ -6,7 +6,7 @@
 <img src="img/readme/0.jpg" width="170" align="left" />
 <img src="img/readme/1.jpg" width="170" align="left"/>
 <img src="img/readme/2.jpg" width="170" align="left"/>
-<img src="img/readme/3.jpg" width="170" align="left"/>
-
+<img src="img/readme/3.jpg" width="170"/>
+<br>
 ▼ 지금 바로 내 여행 성향 테스트하기<br>
 https://zbti.pages.dev/
